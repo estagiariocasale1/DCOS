@@ -7,12 +7,12 @@ namespace dc_os.v1
     {
         static void Main(string[] args)
         {
-            Conexao conn = new Conexao();
-            conn.GetConexao();
             
+            GenericDAO dao = new GenericDAO();
+            var select = dao.SQLselect("SELECT* FROM dcos.turnos");
+            Console.WriteLine(select);
 
 
-           
         }
     }
 }
