@@ -1,5 +1,8 @@
 ﻿using System;
 using dc_os.v1.dao;
+using dc_os.v1.model.entidades;
+using System.Linq;
+using Deedle;
 
 namespace dc_os.v1
 {
@@ -7,10 +10,7 @@ namespace dc_os.v1
     {
         static void Main(string[] args)
         {
-            
-            GenericDAO dao = new GenericDAO();
-            var select = dao.SQLselect("SELECT* FROM dcos.turnos");
-            Console.WriteLine(select);
+                    
 
 
         }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Npgsql;
-using dc_os.v1.dao;
 
 namespace dc_os.v1.dao
 {
@@ -24,16 +21,7 @@ namespace dc_os.v1.dao
             {
                 Console.WriteLine("Comando falhou");
             }
-        }
-        
-        public virtual NpgsqlDataReader SQLselect(string SQL)
-        {
-            connection.Open();
-            using var cmd = new NpgsqlCommand(SQL, connection);
-            using NpgsqlDataReader reader = cmd.ExecuteReader();
-            return reader;     
-
-        }
-
+        }  
+       
     }
 }
