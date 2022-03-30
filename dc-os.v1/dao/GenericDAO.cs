@@ -16,12 +16,13 @@ namespace dc_os.v1.dao
                 injectorcmd.CommandText = SQL;
                 injectorcmd.ExecuteNonQuery();
                 connection.Close();
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine("Comando falhou");
+                connection.Close();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Comando falhou");
-            }
-        }  
-       
+        }
+
     }
 }

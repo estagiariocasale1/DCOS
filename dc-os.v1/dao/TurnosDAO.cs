@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Npgsql;
 using dc_os.v1.model.entidades;
 
@@ -15,17 +14,16 @@ namespace dc_os.v1.dao
         }
         public void Delete(Turnos turno)
         {
-            String sql = String.Format("DELETE FROM dcos.turnos WHERE id_turno = {0}", turno.IDTurno);
+            String sql = String.Format("DELETE FROM dcos.turnos WHERE id_turno = {0}", turno.IdTurno);
             SQLinjector(sql);
         }
         public void Update(Turnos turno)
         {
-            String sql = String.Format("UPDATE dcos.turnos SET nome = '{0}' WHERE id_turno = {1}", turno.Nome, turno.IDTurno);
+            String sql = String.Format("UPDATE dcos.turnos SET nome = '{0}' WHERE id_turno = {1}", turno.Nome, turno.IdTurno);
             SQLinjector(sql);
         }
-        public List<Turnos> select()
+        public List<Turnos> Select(string sql)
         {
-            string sql = "SELECT* FROM dcos.turnos";
             NpgsqlConnection connection = new Conexao().GetConexao();            
             connection.Open();
             using var cmd = new NpgsqlCommand(sql, connection);
@@ -35,11 +33,12 @@ namespace dc_os.v1.dao
             while (reader.Read())
             {
                 Turnos turno = new Turnos();
-                turno.IDTurno = reader.GetInt32(0);                
+                turno.IdTurno = reader.GetInt32(0);                
                 turno.Nome = reader.GetString(1);                
                 listaTurnos.Add(turno);
-            }            
-            return listaTurnos;
+            }
+            connection.Close();
+            return listaTurnos;            
         }               
         
     }

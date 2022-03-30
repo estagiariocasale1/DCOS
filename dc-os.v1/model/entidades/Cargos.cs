@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace dc_os.v1.model.entidades{
-    public class Turnos{
-        private int idTurno;
+    public class Cargos{
+        private int idCargo;
         private string nome;
-        
-        public int IdTurno{get; set;}
-        public string Nome{get; set;}
+
+        public int IdCargo { get;  set; }
+        public string Nome { get; set; }
     }
 }
