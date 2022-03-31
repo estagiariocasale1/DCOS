@@ -36,16 +36,16 @@ namespace dc_os.v1.dao
             {
                 BoletimViagem boletim = new BoletimViagem();
                 boletim.IdViagem = reader.GetInt32(0);
-                boletim.KmChegada = reader.GetFloat(1);
-                boletim.KmSaida = reader.GetFloat(2);
-                boletim.HoraChegada = reader.GetTimeSpan(3);
-                boletim.HoraSaida = reader.GetTimeSpan(4);            
-                boletim.Data = Convert.ToDateTime(reader.GetValue(5).ToString());
+                boletim.KmSaida = reader.GetFloat(1);
+                boletim.KmChegada = reader.GetFloat(2);
+                boletim.HoraSaida = reader.GetTimeSpan(3);
+                boletim.HoraChegada = reader.GetTimeSpan(4);                            
+                boletim.DataSaida = Convert.ToDateTime(reader.GetValue(5).ToString());
+                boletim.DataChegada = Convert.ToDateTime(reader.GetValue(6).ToString());
                 boletim.IdVeiculo = reader.GetInt32(6);
                 boletim.Origem = reader.GetInt32(7);
                 boletim.Destino = reader.GetInt32(8);
-                boletim.Motorista = reader.GetInt32(9);
-                boletim.Escala = reader.GetInt32(10);
+                boletim.Motorista = reader.GetInt32(9);                
                 listaBoletins.Add(boletim);
             }
             connection.Close();

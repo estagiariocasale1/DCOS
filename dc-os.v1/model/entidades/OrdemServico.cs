@@ -16,29 +16,35 @@ namespace dc_os.v1.model.entidades{
         private string nOs;
         private string status;
         //chaves estrangeiras
-        private int idSetor;
-        private int idVeiculo;
-        private int idServico;
-        private int idFunc;
+        private int idSetor;      
+        private int idServico;      
         private int idLocal;
         private int idViagem;
         private int idTurno;
         private int idBloco;
         private int idMacrosservico;
         private int idRotina;
-        
+        private int escala;
+
         public int IdOs { get; set; }
-        public DateTime Data { get; set; }
-        private DateTime Horario { get; set; }
-        public string NOs { get; set;}
-        public string Status { get; set;}
-        private int IdSetor { get; set;}
-        public int IdVeiculo { get; set; }
+        public TimeSpan HoraCriada { get; set; }
+        public TimeSpan HoraIniciada { get; set; }
+        public TimeSpan HoraFinalizada { get; set; }
+        public DateTime DataCriada { get; set; }
+        public DateTime DataIniciada { get; set; }
+        public DateTime DataFinalizada { get; set; }
+        public string NOs { get; set; }
+        public string Status { get; set; }
+        //chaves estrangeiras
+        public int IdSetor { get; set; }
         public int IdServico { get; set; }
-        public int IdFunc { get; set;}
         public int IdLocal { get; set; }
-        public int IdViagem { get; set;}
+        public int IdViagem { get; set; }
         public int IdTurno { get; set; }
+        public int IdBloco { get; set; }
+        public int IdMacrosservico { get; set; }
+        public int IdRotina { get; set; }
+        public int Escala { get; set; }
     }  
 }
 
