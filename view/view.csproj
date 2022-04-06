@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -69,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -82,6 +92,87 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunderbolt %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunderbolt %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunderbolt %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logodcos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logodcos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logodcos-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logodcos-removebg-preview %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veiculos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veiculologo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servico-de-reparacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadastro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relatorio-de-negocios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MATERIAIS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ORÇAMENTO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\raio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\galaxy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logodcos-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logodcos-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarios1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MASI2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao-editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarios2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logocasal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
